@@ -110,13 +110,6 @@ cd ~/PX4-Autopilot
 make px4_sitl_default jmavsim
 ```
 
-### Run the simulator in a separate terminal:
-
-```bash
-cd ~/PX4-Autopilot
-make px4_sitl_default jmavsim
-```
-
 This opens PX4 + JMAVSim in software-in-the-loop simulation.
 
 ---
@@ -168,6 +161,7 @@ source devel/setup.bash
 
 **Terminal 1:** Start ROS Master
 ```bash
+source /opt/ros/noetic/setup.bash
 roscore
 ```
 
@@ -179,6 +173,7 @@ make px4_sitl_default jmavsim
 
 **Terminal 3:** Launch MAVROS
 ```bash
+source /opt/ros/noetic/setup.bash
 rosrun mavros mavros_node _fcu_url:=udp://:14540@127.0.0.1:14557
 ```
 
